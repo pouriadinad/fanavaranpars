@@ -279,56 +279,52 @@
             transform: scale(1.1);
         }
 
-        /* ریسپانسیو */
-        @media (max-width: 768px) {
-            header {
-                height: 80vh;
-                padding: 30px 0;
-            }
+        /* برای هدر در نمایش موبایل */
+@media (max-width: 768px) {
+    header {
+        height: 60vh; /* کاهش ارتفاع هدر برای صفحه‌های کوچک‌تر */
+        padding: 30px 0;
+        text-align: left; /* متن هدر را چپ‌چین می‌کنیم تا برای موبایل بهتر نمایش داده شود */
+    }
 
-            header h1 {
-                font-size: 40px;
-            }
+    header h1 {
+        font-size: 30px; /* اندازه متن هدر در موبایل */
+        text-align: center;
+    }
 
-            header p {
-                font-size: 18px;
-            }
+    header p {
+        font-size: 16px; /* کاهش اندازه پاراگراف در موبایل */
+        text-align: center;
+    }
 
-            .navbar {
-                padding: 10px;
-            }
+    .navbar {
+        padding: 10px;
+    }
 
-            .navbar-brand {
-                font-size: 24px;
-            }
+    .navbar-brand {
+        font-size: 24px; /* اندازه لوگو در نوار ناوبری */
+        text-align: left;
+    }
 
-            .navbar-nav .nav-item {
-                margin: 0 10px;
-            }
+    .navbar-nav .nav-item {
+        margin: 0 10px;
+    }
 
-            .service-card {
-                margin-bottom: 20px;
-            }
+    .navbar-nav .nav-link {
+        font-size: 16px; /* اندازه لینک‌ها در موبایل */
+        padding: 5px 0;
+    }
 
-            .service-card h5 {
-                font-size: 20px;
-            }
+    .navbar-toggler {
+        margin-left: auto;
+    }
 
-            .contact-section p {
-                font-size: 18px;
-            }
-
-            .contact-section form input,
-            .contact-section form textarea {
-                font-size: 16px;
-            }
-
-            .floating-btn {
-                bottom: 20px;
-                right: 20px;
-                font-size: 20px;
-            }
-        }
+    .floating-btn {
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px; /* اندازه دکمه برگشت به بالا در موبایل */
+    }
+}
 
         @media (max-width: 576px) {
             header h1 {
