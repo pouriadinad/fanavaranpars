@@ -285,8 +285,26 @@ header .btn:hover {
         /* ریسپانسیو */
         @media (max-width: 768px) {
           header {
-        height: 40vh;
+        height: 80vh;
     }
+    .navbar-brand {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    font-size: 28px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 5rem; /* تنظیم ارتفاع لوگو */
+    margin-right: 10px;
+}
+
             header h1 {
                 font-size: 40px;
             }
