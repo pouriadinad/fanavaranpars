@@ -13,12 +13,12 @@
 
     <style>
         :root {
-            --main-bg-color: #f4f7fb; /* رنگ پس‌زمینه ملایم و آرام */
-            --primary-color: #00bcd4; /* رنگ اصلی برای عناصر قابل کلیک */
-            --accent-color: #1a73e8; /* رنگی برای تأکید بیشتر */
-            --highlight-color: #ff7043; /* رنگی برای افکت‌ها */
-            --text-color: #333; /* رنگ متن اصلی */
-            --secondary-text-color: #777; /* رنگ متن فرعی */
+            --main-bg-color: #f4f7fb;
+            --primary-color: #00bcd4;
+            --accent-color: #1a73e8;
+            --highlight-color: #ff7043;
+            --text-color: #333;
+            --secondary-text-color: #777;
             --btn-hover-color: #e67e22;
             --shadow-color: rgba(0, 0, 0, 0.15);
         }
@@ -30,7 +30,6 @@
             box-sizing: border-box;
         }
 
-        /* استایل‌های اصلی */
         body {
             font-family: 'Varela Round', sans-serif;
             background-color: var(--main-bg-color);
@@ -91,7 +90,7 @@
 
         header p {
             font-size: 24px;
-            color: #f8f9fa; /* کمی روشن‌تر از سفید برای تعادل */
+            color: #f8f9fa;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         }
 
@@ -119,6 +118,7 @@
             background-color: rgba(255, 255, 255, 0);
             box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
             transition: background-color 0.3s;
+            padding: 10px 0;
         }
 
         nav.sticky {
@@ -325,6 +325,20 @@
             .content p {
                 font-size: 16px;
             }
+
+            /* بهینه‌سازی منو */
+            .navbar-collapse {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar-nav .nav-item {
+                margin: 10px 0;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 20px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -352,36 +366,36 @@
 </head>
 
 <body>
-  <header id="header">
-    <div class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
-            <!-- لوگو -->
-            <img src="image/logo.webp" alt="لوگوی فناوران پارس" style="height: 6rem; margin-bottom: 5px;">
-            <br> <!-- این خط باعث می‌شود نام برند در زیر لوگو قرار بگیرد -->
-            فناوران پارس
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">درباره ما</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">خدمات</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">تماس با ما</a>
-                </li>
-            </ul>
+    <header id="header">
+        <div class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <!-- لوگو -->
+                <img src="image/logo.webp" alt="لوگوی فناوران پارس" style="height: 6rem; margin-bottom: 5px;">
+                <br> <!-- این خط باعث می‌شود نام برند در زیر لوگو قرار بگیرد -->
+                فناوران پارس
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">خدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <h1>خدمات تخصصی برای آینده‌ای روشن</h1>
-    <p>با ما همراه شوید و تجربه‌ای متفاوت را در صنعت فناوری داشته باشید.</p>
-    <a href="#services" class="btn">خدمات ما</a>
-</header>
+        <h1>خدمات تخصصی برای آینده‌ای روشن</h1>
+        <p>با ما همراه شوید و تجربه‌ای متفاوت را در صنعت فناوری داشته باشید.</p>
+        <a href="#services" class="btn">خدمات ما</a>
+    </header>
 
 
 
