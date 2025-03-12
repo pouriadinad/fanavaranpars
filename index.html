@@ -22,6 +22,12 @@
             --btn-hover-color: #e67e22;
             --shadow-color: rgba(0, 0, 0, 0.15);
         }
+         /* تنظیمات عمومی برای سایت */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         /* استایل‌های اصلی */
         body {
@@ -288,7 +294,7 @@ header .btn:hover {
         height: 80vh;
     }
             header h1 {
-                font-size: 40px;
+                font-size: 30px;
             }
 
             .carousel-caption h1 {
@@ -301,13 +307,42 @@ header .btn:hover {
             .service-card h5 {
                 font-size: 20px;
             }
+            footer {
+                font-size: 12px;
+            }
 
             .contact-section p {
                 font-size: 18px;
             }
-            header p {
-        font-size: 18px;
+            .content h2 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
     }
+    
+    @media (max-width: 480px) {
+            body {
+                font-size: 13px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            footer {
+                font-size: 11px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
