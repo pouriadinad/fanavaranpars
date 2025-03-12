@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فناوران پارس - پیشگام در خدمات تخصصی</title>
+
+    <!-- لینک به فونت‌ها -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+    <style>
+        :root {
+            --main-bg-color: #f4f7fb; /* رنگ پس‌زمینه ملایم و آرام */
+            --primary-color: #00bcd4; /* رنگ اصلی برای عناصر قابل کلیک */
+            --accent-color: #1a73e8; /* رنگی برای تأکید بیشتر */
+            --highlight-color: #ff7043; /* رنگی برای افکت‌ها */
+            --text-color: #333; /* رنگ متن اصلی */
+            --secondary-text-color: #777; /* رنگ متن فرعی */
+            --btn-hover-color: #e67e22;
+            --shadow-color: rgba(0, 0, 0, 0.15);
+        }
+
+        /* استایل‌های اصلی */
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--secondary-text-color);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .container {
+            padding-top: 80px;
+        }
+
+        /* هدر */
+        header {
+            position: relative;
+            background: linear-gradient(to right, rgba(50, 226, 250, 0.7), rgba(9, 13, 18, 0.7)), 
+            url('image/pic5.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 60px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 222, 159, 0.7);
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 24px;
+    color: #f8f9fa; /* کمی روشن‌تر از سفید برای تعادل */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+        header .btn {
+    background-color: #01efa3;
+    color: #222;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+header .btn:hover {
+    background-color: #ffaa00;
+    border-color: #f79c00;
+}
+
+
+        /* ناوبر */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+            transition: background-color 0.3s;
+        }
+
+        nav.sticky {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+        .navbar {
+            padding: 10px 50px;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--light-text-color);
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--highlight-color);
+        }
+
+        /* بخش درباره ما */
+        #about {
+            padding: 80px 0;
+            background-color: var(--main-bg-color);
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        #about p {
+            font-size: 20px;
+            color: var(--secondary-text-color);
+        }
+
+        /* خدمات */
+        .services-section {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px var(--shadow-color);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-card h5 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* فرم تماس */
+        .contact-section {
+            background-color: #1c1c1c;
+            color: var(--light-text-color);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-section form input,
+        .contact-section form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background-color: #535353;
+            border: none;
+            border-radius: 10px;
+            color: var(--light-text-color);
+            font-size: 18px;
+        }
+
+        .contact-section form button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-section form button:hover {
+            background-color: var(--highlight-color);
+        }
+
+        /* دکمه بازگشت به بالا */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            box-shadow: 0 10px 15px var(--shadow-color);
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .floating-btn:hover {
+            background-color: var(--highlight-color);
+            transform: scale(1.1);
+        }
+
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+          header {
+        height: 80vh;
+    }
+            header h1 {
+                font-size: 40px;
+            }
+
+            .carousel-caption h1 {
+                font-size: 1.8rem;
+            }
+            .service-card {
+        margin-bottom: 20px;
+    }
+
+            .service-card h5 {
+                font-size: 20px;
+            }
+
+            .contact-section p {
+                font-size: 18px;
+            }
+            header p {
+        font-size: 18px;
+    }
+        }
+    </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <!-- لوگو -->
+            <img src="image/logo.webp" alt="لوگوی فناوران پارس" style="height: 6rem; margin-bottom: 5px;">
+            <br> <!-- این خط باعث می‌شود نام برند در زیر لوگو قرار بگیرد -->
+            فناوران پارس
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>خدمات تخصصی برای آینده‌ای روشن</h1>
+    <p>با ما همراه شوید و تجربه‌ای متفاوت را در صنعت فناوری داشته باشید.</p>
+    <a href="#services" class="btn">خدمات ما</a>
+</header>
+
+
+
+  <!-- درباره ما -->
+<div id="about" style="padding-top: 20px; padding-bottom: 40px;">
+  <div class="container">
+      <h2>درباره ما</h2>
+      <p>شرکت فناوران پارس با هدف ارائه خدمات تخصصی در زمینه شبکه، زیرساخت و امنیت در کنار سایر خدمات فنی از جمله نصب دوربین‌های مداربسته و آرایش رک، تأسیس شده است. ما به کسب‌وکارها و سازمان‌ها کمک می‌کنیم تا با استفاده از راهکارهای مدرن و استاندارد، زیرساخت‌های فناوری اطلاعات خود را بهینه کرده و امنیت سیستم‌های خود را تأمین کنند.</p>
+  </div>
+</div>
+
+
+    <!-- خدمات -->
+    <div id="services" class="services-section">
+        <div class="container">
+            <h2>خدمات ما</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="image\pic5.jpg" alt="خدمات 1">
+                        <h5>خدمات امنیت شبکه</h5>
+                        <p>امنیت شبکه یکی از مهم‌ترین دغدغه‌های هر سازمان است. در فناوران پارس، ما با ارائه راهکارهای جامع امنیتی، از جمله فایروال‌ها، سیستم‌های تشخیص نفوذ (IDS)، رمزنگاری داده‌ها و ارزیابی امنیتی، به شما کمک می‌کنیم تا از شبکه‌های خود در برابر تهدیدات داخلی و خارجی محافظت کنید. ما با استفاده از آخرین روش‌های امنیتی و مشاوره‌های تخصصی، اطمینان حاصل می‌کنیم که اطلاعات شما همیشه در امنیت باشند.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="image\pic39.jpg" alt="خدمات 2">
+                        <h5>کابل‌کشی شبکه (پسیو)</h5>
+                        <p>شرکت ما خدمات کابل‌کشی شبکه شامل طراحی و نصب کابل‌های شبکه (Cat5, Cat6, Fiber Optic) را با بالاترین کیفیت ارائه می‌دهد. ما به‌طور ویژه به پسیو شبکه و استانداردهای کابل‌کشی اهمیت می‌دهیم و اطمینان حاصل می‌کنیم که تمامی اتصالات به‌طور کامل و ایمن انجام شوند تا عملکرد شبکه بهینه باشد. تمامی پروژه‌ها با رعایت دقیق استانداردها و با استفاده از بهترین تجهیزات انجام می‌شود.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="image\pic8.jpg" alt="خدمات 3">
+                        <h5>خدمات شبکه و زیرساختی</h5>
+                        <p>ما به‌عنوان متخصصین در زمینه طراحی، پیاده‌سازی و نگهداری شبکه‌های کامپیوتری، خدمات متنوعی را ارائه می‌دهیم که شامل نصب و راه‌اندازی شبکه‌های LAN و WAN، طراحی و پیاده‌سازی زیرساخت‌های دیتاسنتر، و مدیریت بهینه‌سازی شبکه‌ها می‌شود. با استفاده از بهترین تجهیزات و تکنولوژی‌های روز دنیا، به شما کمک می‌کنیم تا شبکه‌ای پایدار، مقیاس‌پذیر و امن داشته باشید.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-card">
+                      <img src="image\pic39.jpg" alt="خدمات 2">
+                      <h5>نصب و پیکربندی دوربین‌های مداربسته</h5>
+                      <p>ما در فناوران پارس، راهکارهای پیشرفته‌ای در زمینه نصب و راه‌اندازی دوربین‌های مداربسته و سیستم‌های نظارت تصویری ارائه می‌دهیم. این خدمات شامل نصب دوربین‌های تحت شبکه (IP)، آنالوگ و دوربین‌های PTZ می‌شود که به شما این امکان را می‌دهد تا به‌طور کامل بر محیط‌های کاری، سازمانی و خانگی خود نظارت داشته باشید. علاوه بر این، قابلیت‌های ضبط تصاویر با کیفیت بالا و انتقال تصاویر به صورت آنلاین از دیگر ویژگی‌های ما است.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-card">
+                    <img src="image\pic39.jpg" alt="خدمات 2">
+                    <h5>خدمات پشتیبانی و نگهداری</h5>
+                    <p>ما همچنین خدمات پشتیبانی و نگهداری شبکه‌ها، تجهیزات امنیتی، سیستم‌های دوربین مداربسته و زیرساخت‌های فناوری اطلاعات را ارائه می‌دهیم. تیم متخصص ما آماده است تا به‌طور دوره‌ای شبکه‌ها و سیستم‌های شما را بررسی و تعمیر کند و مشکلات احتمالی را قبل از تبدیل شدن به بحران شناسایی و رفع کند. هدف ما این است که زیرساخت‌های شما همیشه به بهترین شکل ممکن کار کنند و هیچ‌گونه وقفه‌ای در روند کسب‌وکار شما ایجاد نشود.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-card">
+                  <img src="image\pic39.jpg" alt="خدمات 2">
+                  <h5>خدمات مشاوره تخصصی</h5>
+                  <p>با توجه به تجربه و دانش فنی تیم ما، می‌توانید از خدمات مشاوره تخصصی برای طراحی و پیاده‌سازی شبکه‌ها و زیرساخت‌های فناوری اطلاعات خود بهره‌مند شوید. ما با تحلیل دقیق نیازهای شما و بررسی شرایط موجود، راهکارهایی سفارشی و مقرون به‌صرفه ارائه می‌دهیم. هدف ما کمک به شما در انتخاب بهترین گزینه‌ها برای بهینه‌سازی عملکرد و امنیت سیستم‌هایتان است.</p>
+              </div>
+          </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تماس با ما -->
+    <div id="contact" class="contact-section">
+        <div class="container">
+            <h2>تماس با ما</h2>
+            <p>برای دریافت مشاوره و اطلاعات بیشتر، با ما تماس بگیرید.</p>
+            <p>09013939128 - 09355591848</p>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="نام شما" required>
+                <input type="email" name="email" placeholder="ایمیل شما" required>
+                <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+                <button type="submit">ارسال پیام</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="#header" class="floating-btn"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        <!-- دکمه بازگشت به بالا -->
+    <a href="#header" class="floating-btn"><i class="fas fa-arrow-up"></i></a>
+
+        // جاوا اسکریپت برای افکت چسبندگی نوار ناوبری
+        window.onscroll = function() {stickyNavbar()};
+
+        var navbar = document.querySelector("nav");
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
