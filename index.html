@@ -22,8 +22,9 @@
             --btn-hover-color: #e67e22;
             --shadow-color: rgba(0, 0, 0, 0.15);
         }
-         /* تنظیمات عمومی برای سایت */
-         * {
+
+        /* تنظیمات عمومی برای سایت */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -80,36 +81,34 @@
         }
 
         header h1 {
-    font-size: 70px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0, 222, 159, 0.7);
-    margin-bottom: 20px;
-}
+            font-size: 70px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 222, 159, 0.7);
+            margin-bottom: 20px;
+        }
 
-header p {
-    font-size: 24px;
-    color: #f8f9fa; /* کمی روشن‌تر از سفید برای تعادل */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
+        header p {
+            font-size: 24px;
+            color: #f8f9fa; /* کمی روشن‌تر از سفید برای تعادل */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
 
         header .btn {
-    background-color: #01efa3;
-    color: #222;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 50px;
-    transition: 0.3s;
-    border: 2px solid transparent;
-}
+            background-color: #01efa3;
+            color: #222;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
 
-header .btn:hover {
-    background-color: #ffaa00;
-    border-color: #f79c00;
-}
-
+        header .btn:hover {
+            background-color: #ffaa00;
+            border-color: #f79c00;
+        }
 
         /* ناوبر */
         nav {
@@ -123,10 +122,9 @@ header .btn:hover {
         }
 
         nav.sticky {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
         .navbar {
             padding: 10px 50px;
@@ -268,28 +266,12 @@ header .btn:hover {
         .contact-section form button:hover {
             background-color: var(--highlight-color);
         }
+
         /* افزودن max-width به تصاویر */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* بخش هدر */
-header h1 {
-    font-size: 50px;
-}
-
-header p {
-    font-size: 18px;
-}
-
-/* خدمات */
-.service-card {
-    margin-bottom: 30px;
-    box-sizing: border-box;
-}
-        
-        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
         /* دکمه بازگشت به بالا */
         .floating-btn {
@@ -309,27 +291,25 @@ header p {
             background-color: var(--highlight-color);
             transform: scale(1.1);
         }
-        
 
         /* ریسپانسیو */
         @media (max-width: 768px) {
-          header {
-        height: 80vh;
-    }
+            header {
+                height: 80vh;
+            }
+
             header h1 {
                 font-size: 30px;
             }
 
-            .carousel-caption h1 {
-                font-size: 1.8rem;
-            }
             .service-card {
-        margin-bottom: 20px;
-    }
+                margin-bottom: 20px;
+            }
 
             .service-card h5 {
                 font-size: 20px;
             }
+
             footer {
                 font-size: 12px;
             }
@@ -337,6 +317,7 @@ header p {
             .contact-section p {
                 font-size: 18px;
             }
+
             .content h2 {
                 font-size: 28px;
             }
@@ -344,9 +325,9 @@ header p {
             .content p {
                 font-size: 16px;
             }
-    }
-    
-    @media (max-width: 480px) {
+        }
+
+        @media (max-width: 480px) {
             body {
                 font-size: 13px;
             }
