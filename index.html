@@ -278,6 +278,54 @@
             background-color: var(--highlight-color);
             transform: scale(1.1);
         }
+        /* تنظیمات برای نمایش هدر در حالت عرضی */
+@media (max-width: 768px) and (orientation: landscape) {
+    header {
+        height: auto; /* ارتفاع هدر به صورت خودکار تنظیم شود */
+        padding: 20px;
+        text-align: left;
+        overflow: hidden; /* جلوگیری از خارج شدن محتوا */
+    }
+
+    header h1 {
+        font-size: 30px; /* کاهش اندازه فونت هدر */
+        text-align: center;
+        white-space: nowrap; /* جلوگیری از شکستن متن */
+        overflow: hidden;
+        text-overflow: ellipsis; /* متن اضافی در صورت نیاز با "..." نمایش داده می‌شود */
+    }
+
+    header p {
+        font-size: 16px; /* کاهش اندازه فونت برای پاراگراف */
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row; /* تنظیم نوار ناوبری به صورت افقی */
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 15px; /* افزایش فاصله بین آیتم‌ها */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    .floating-btn {
+        font-size: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
 
         /* برای هدر در نمایش موبایل */
 @media (max-width: 768px) {
