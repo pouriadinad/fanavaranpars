@@ -282,41 +282,43 @@ header .btn:hover {
             transform: scale(1.1);
         }
 
+        /* ریسپانسیو */
         @media (max-width: 768px) {
-     .navbar-brand {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 9999; /* اطمینان از اینکه لوگو بالای همه المان‌ها قرار بگیرد */
+    .navbar-brand {
+        position: fixed;
+        top: 15px;   /* فاصله از بالای صفحه */
+        right: 15px; /* فاصله از سمت راست صفحه */
+        z-index: 9999; /* اطمینان از اینکه لوگو بالای سایر المان‌ها قرار بگیرد */
+        transition: transform 0.3s ease; /* انتقال نرم */
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1); /* هنگام هاور شدن، کمی بزرگتر شود */
     }
 
 
+            header h1 {
+                font-size: 40px;
+            }
 
-    header {
-        height: 80vh;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-
-    .service-card {
+            .carousel-caption h1 {
+                font-size: 1.8rem;
+            }
+            .service-card {
         margin-bottom: 20px;
     }
 
-    .service-card h5 {
-        font-size: 20px;
-    }
+            .service-card h5 {
+                font-size: 20px;
+            }
 
-    .contact-section p {
+            .contact-section p {
+                font-size: 18px;
+            }
+            header p {
         font-size: 18px;
     }
-
-    header p {
-        font-size: 18px;
-    }
-}
-
+        }
     </style>
 </head>
 
